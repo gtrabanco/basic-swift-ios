@@ -24,17 +24,22 @@ class StarWarsCharacter {
     var name : String? {
         get {
             
+            guard firstName == nil && lastName == nil else {
+                //If firstname and lastname are not null
+                return "\(firstName) \(lastName)"
+            }
+            
             //If we do not have the firstName return lastName
-            guard let firstName = firstName else {
+            guard let _ = firstName else {
                 return lastName
             }
             
-            guard let lastName = lastName else {
+            guard let _ = lastName else {
                 return firstName
             }
             
-            //If we are here we have both
-            return "\(firstName) \(lastName)"
+            //If we are here we have nothing
+            return ""
         }
         
         /*

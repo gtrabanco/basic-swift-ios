@@ -15,6 +15,7 @@
 		6D0B2EE91C04DE6A00BE9AC5 /* StarWarsVIITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B2EE81C04DE6A00BE9AC5 /* StarWarsVIITests.swift */; };
 		6D0B2EF51C04E51100BE9AC5 /* StarWarsCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B2EF41C04E51100BE9AC5 /* StarWarsCharacter.swift */; };
 		6D0B2EF81C06052C00BE9AC5 /* Affiliations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B2EF71C06052C00BE9AC5 /* Affiliations.swift */; };
+		6D0B2EFA1C066F0600BE9AC5 /* ForceSensitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B2EF91C066F0600BE9AC5 /* ForceSensitive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		6D0B2EEA1C04DE6A00BE9AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D0B2EF41C04E51100BE9AC5 /* StarWarsCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsCharacter.swift; sourceTree = "<group>"; };
 		6D0B2EF71C06052C00BE9AC5 /* Affiliations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Affiliations.swift; sourceTree = "<group>"; };
+		6D0B2EF91C066F0600BE9AC5 /* ForceSensitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceSensitive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			children = (
 				6D0B2EF41C04E51100BE9AC5 /* StarWarsCharacter.swift */,
 				6D0B2EF71C06052C00BE9AC5 /* Affiliations.swift */,
+				6D0B2EF91C066F0600BE9AC5 /* ForceSensitive.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				6D0B2ED61C04DE6A00BE9AC5 /* ViewController.swift in Sources */,
 				6D0B2EF51C04E51100BE9AC5 /* StarWarsCharacter.swift in Sources */,
 				6D0B2EF81C06052C00BE9AC5 /* Affiliations.swift in Sources */,
+				6D0B2EFA1C066F0600BE9AC5 /* ForceSensitive.swift in Sources */,
 				6D0B2ED41C04DE6A00BE9AC5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
