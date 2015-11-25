@@ -5,7 +5,7 @@ import UIKit
 var str = "Hello, playground"
 
 
-//: Optionals: a box to store a nil
+//: Optionals: a package (not box) to store a nil
 // ?
 var newBoxStringOptional:String?
 //var newStringNotOptional: String //Error Sponsored by Apple
@@ -14,7 +14,7 @@ var newBoxStringOptional:String?
 //All go packaged in an optional the "Hello world!" and the first nil. They are not going alone like any other String or Nil (Nil is not valid in Swift)
 
 
-//How to know if the box is empty
+//How to know if the package is empty
 if newBoxStringOptional == nil {
     print("Do not get anything! IS EMPTY!");
 }
@@ -44,5 +44,14 @@ newBoxStringOptional?.hasPrefix("Hello") //If not nil run the method
 
 //Unsecure and in the rought way (!)
 print("Unsecure way \(newBoxStringOptional!) only runs if the var has value if not will throw an error (comment line 13 & 39 to watch it).")
+
+
+//Unpackaging some vars
+let url:String? = "http://www.gabi.com.esdf"
+
+//If url is not null create NSUrl with unpackaged url
+if let urlString = url, realURL = NSURL(string: urlString) {
+    //If we are here urlString and realURL has no null values
+}
 
 

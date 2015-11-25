@@ -19,6 +19,31 @@ class StarWarsCharacter {
     let soundData    : NSData
     let affiliation : StarWarsAffiliation
     
+    //MARK: - Computed Variables
+    //They are a read only variables
+    var name : String? {
+        get {
+            
+            //If we do not have the firstName return lastName
+            guard let firstName = firstName else {
+                return lastName
+            }
+            
+            guard let lastName = lastName else {
+                return firstName
+            }
+            
+            //If we are here we have both
+            return "\(firstName) \(lastName)"
+        }
+        
+        /*
+        set {
+            _name =
+        }
+        */
+    }
+    
     
     //MARK: - Init (Designated Initializer)
     init(firstName: String?,
