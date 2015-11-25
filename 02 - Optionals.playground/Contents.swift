@@ -52,6 +52,7 @@ let url:String? = "http://www.gabi.com.esdf"
 //If url is not null create NSUrl with unpackaged url
 if let urlString = url, realURL = NSURL(string: urlString) {
     //If we are here urlString and realURL has no null values
+    //You can add more checks with where, see the book to that case!
 }
 
 
