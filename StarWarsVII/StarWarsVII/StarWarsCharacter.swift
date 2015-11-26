@@ -93,9 +93,16 @@ class StarWarsCharacter:Equatable {
         }
     }
     
+    
+    var proxyForSorting:String {
+        get {
+            return "A\(firstName)\(lastName)\(alias)"
+        }
+    }
+    
 }
 
-//MARK: Operators
+//MARK: - Operators
 //Two ways define as empty extension or in the class and declare after
 //As extension it would be
 // extension StarWarsCharacter:Equatable {}
@@ -119,6 +126,15 @@ func == (lhs: StarWarsCharacter, rhs: StarWarsCharacter) -> Bool {
     // they are the same class and they are no pointing to the
     // instance of the same class
     return (lhs.proxyForComparison == rhs.proxyForComparison)
+}
+
+
+//MARK: - Comparable
+extension StarWarsCharacter:Comparable {}
+
+func <(lhs: StarWarsCharacter, rhs: StarWarsCharacter) -> Bool {
+    
+    return lhs.proxyForSorting < rhs.proxyForSorting
 }
 
 

@@ -46,6 +46,8 @@
 		6D0B2F711C06770100BE9AC5 /* vader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D0B2F531C06770100BE9AC5 /* vader.jpg */; };
 		6D0B2F721C06770100BE9AC5 /* yoda.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6D0B2F541C06770100BE9AC5 /* yoda.caf */; };
 		6D0B2F731C06770100BE9AC5 /* yoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D0B2F551C06770100BE9AC5 /* yoda.jpg */; };
+		6D127C821C07A8390086C457 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D127C811C07A8390086C457 /* JSONProcessing.swift */; };
+		6D127C851C07B6CE0086C457 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D127C841C07B6CE0086C457 /* FoundationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		6D0B2F531C06770100BE9AC5 /* vader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vader.jpg; sourceTree = "<group>"; };
 		6D0B2F541C06770100BE9AC5 /* yoda.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yoda.caf; sourceTree = "<group>"; };
 		6D0B2F551C06770100BE9AC5 /* yoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoda.jpg; sourceTree = "<group>"; };
+		6D127C811C07A8390086C457 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
+		6D127C841C07B6CE0086C457 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		6D0B2ED21C04DE6A00BE9AC5 /* StarWarsVII */ = {
 			isa = PBXGroup;
 			children = (
+				6D127C831C07B6980086C457 /* Framework */,
 				6D0B2EF31C04DFB900BE9AC5 /* App */,
 			);
 			path = StarWarsVII;
@@ -178,6 +183,7 @@
 				6D0B2EF41C04E51100BE9AC5 /* StarWarsCharacter.swift */,
 				6D0B2EF71C06052C00BE9AC5 /* Affiliations.swift */,
 				6D0B2EF91C066F0600BE9AC5 /* ForceSensitive.swift */,
+				6D127C811C07A8390086C457 /* JSONProcessing.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -217,6 +223,14 @@
 				6D0B2F551C06770100BE9AC5 /* yoda.jpg */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		6D127C831C07B6980086C457 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				6D127C841C07B6CE0086C457 /* FoundationExtensions.swift */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +365,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D127C851C07B6CE0086C457 /* FoundationExtensions.swift in Sources */,
+				6D127C821C07A8390086C457 /* JSONProcessing.swift in Sources */,
 				6D0B2ED61C04DE6A00BE9AC5 /* ViewController.swift in Sources */,
 				6D0B2EF51C04E51100BE9AC5 /* StarWarsCharacter.swift in Sources */,
 				6D0B2EF81C06052C00BE9AC5 /* Affiliations.swift in Sources */,
@@ -549,6 +565,7 @@
 				6D0B2EEF1C04DE6A00BE9AC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D0B2EF01C04DE6A00BE9AC5 /* Build configuration list for PBXNativeTarget "StarWarsVIITests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +574,7 @@
 				6D0B2EF21C04DE6A00BE9AC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

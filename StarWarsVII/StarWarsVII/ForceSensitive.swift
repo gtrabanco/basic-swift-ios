@@ -70,6 +70,24 @@ class ForceSensitive: StarWarsCharacter {
                 midichlorians: midichlorians);
     }
     
+    
+    //MARK: - Proxies
+    
+    override var proxyForComparison:String {
+        get {
+            return "\(super.proxyForComparison) \(midichlorians)"
+            //You can also concatenate with "+"
+        }
+    }
+    
+    override var proxyForSorting:String {
+        get {
+            let isSith = ((affiliation == .GalacticEmpire) || (affiliation == .FirstOrder)) ? "Z" : "X"
+            
+            return "\(isSith)\(super.proxyForSorting)\(midichlorians)"
+        }
+    }
 }
+
 
 
