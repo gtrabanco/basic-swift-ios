@@ -65,10 +65,32 @@ func decode(StarWarsCharacter json:JSONDictionary) throws ->StarWarsCharacter {
     }
     
     guard let soundName = json[JSONKeys.soundFile.rawValue] as? String,
-            sound = NSData(contentsOfURL: NSURL(string: soundName))
+            soundURL = NSBundle.mainBundle().URLForResource(soundName),
+            soundData = NSData(contentsOfURL: soundURL)
         else {
-            throw JSONProcessingError.InvalidUrlFormatForJSONResource
+            throw JSONProcessingError.ResourcePointedByURLNotReachable
     }
+    
+    guard let affiliationName = json[JSONKeys.affiliation.rawValue] as? String
+        else {
+            throw JSONProcessingError.JSONFormatError
+    }
+    
+    let firstName   = json[JSONKeys.firstName.rawValue] as? String
+    let lastName    = json[JSONKeys.lastName.rawValue] as? String
+    let alias       = json[JSONKeys.alias.rawValue] as? String
+    
+    let affiliation = StarWarsAffiliation.byName(affiliationName)
+    
+    //Creating the StarwarsCharacter
+    return StarWarsCharacter(firstName: firstName,
+        lastName: lastName,
+        alias: alias,
+        soundData: soundData,
+        photo: image,
+        url: url,
+        affiliation: affiliation)
+    
 }
 
 

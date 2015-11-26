@@ -17,6 +17,33 @@ enum StarWarsAffiliation {
     case FirstOrder
     case Unknown
     
+    
+    // Type Method or Static method in orther languages
+    static func byName(name: String) -> StarWarsAffiliation {
+        
+        let returnAffiliation: StarWarsAffiliation
+        
+        switch name {
+            
+            case "Galactic Empire":
+                returnAffiliation = .GalacticEmpire
+            
+            case "Rebel Alliance":
+                returnAffiliation = .RebelAlliance
+            
+            case "Jabba's Criminal Empire":
+                returnAffiliation = .JabbaCriminalEmpire
+            
+            case "First Order":
+                returnAffiliation = .RebelAlliance
+            
+            default:
+                returnAffiliation = .Unknown
+            
+        }
+        
+        return returnAffiliation
+    }
 }
 
 
