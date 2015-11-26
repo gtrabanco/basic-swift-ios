@@ -40,7 +40,6 @@ class ForceSensitive: StarWarsCharacter {
         soundData: NSData,
         photo: UIImage,
         url: NSURL,
-        affiliation: StarWarsAffiliation,
         midichlorians: Int) {
             
             self.init(firstName: jediWithFirstName,
@@ -59,7 +58,6 @@ class ForceSensitive: StarWarsCharacter {
         soundData: NSData,
         photo: UIImage,
         url: NSURL,
-        affiliation: StarWarsAffiliation,
         midichlorians: Int) {
             
             self.init(firstName: sithWithFirstName,

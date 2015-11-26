@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        self.tddParaPobres()
         // Override point for customization after application launch.
         return true
     }
@@ -40,7 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    func tddParaPobres() {
+        
+        
+        if let img = UIImage(named: "vader.jpg"),
+        soundFileUrl = NSBundle.mainBundle().URLForResource("vader", withExtension: "caf"),
+        soundFile = NSData(contentsOfURL: soundFileUrl),
+        wikiURL = NSURL(string: "https://en.wikipedia.org/wiki/Darth_Vader")
+        {
+            let vader = ForceSensitive(sithWithFirstName: "Anakin", lastName: "Skywalker", alias: "Darth Vader", soundData: soundFile, photo: img, url: wikiURL, midichlorians: 15_000)
+            
+            print(vader)
+        }
+        
+    }
 }
 
