@@ -36,21 +36,38 @@ enum JSONProcessingError:ErrorType {
     case JSONFormatError
 }
 
+//MARK: - Structs
+struct StrictStarWarsCharacter {
+    let firstName    : String?
+    let lastName     : String?
+    let alias        : String?
+    let photo        : UIImage
+    let url          : NSURL
+    let soundData    : NSData
+    let affiliation : StarWarsAffiliation
+}
+
+struct StrictForceSensitive {
+    let character:StrictStarWarsCharacter
+    let midichlorians: Int
+}
+
 
 //MARK: - JsonKeys
 enum JSONKeys:String {
-    case firstName   = "firstName"
-    case lastName    = "lastName"
-    case alias       = "alias"
-    case soundFile   = "soundFile"
-    case imageFile   = "imageFile"
-    case affiliation = "affiliation"
-    case url         = "url"
+    case firstName     = "firstName"
+    case lastName      = "lastName"
+    case alias         = "alias"
+    case soundFile     = "soundFile"
+    case imageFile     = "imageFile"
+    case affiliation   = "affiliation"
+    case url           = "url"
+    case midichlorians = "midichlorians"
 }
 
 
 //MARK: - Decoding
-func decode(StarWarsCharacter json:JSONDictionary) throws ->StarWarsCharacter {
+func decode(StarWarsCharacter json:JSONDictionary) throws ->StrictStarWarsCharacter {
     
     guard let urlString = json[JSONKeys.url.rawValue] as? String,
             url = NSURL(string: urlString)
@@ -83,14 +100,27 @@ func decode(StarWarsCharacter json:JSONDictionary) throws ->StarWarsCharacter {
     let affiliation = StarWarsAffiliation.byName(affiliationName)
     
     //Creating the StarwarsCharacter
-    return StarWarsCharacter(firstName: firstName,
+    return StrictStarWarsCharacter(firstName: firstName,
         lastName: lastName,
         alias: alias,
-        soundData: soundData,
         photo: image,
         url: url,
+        soundData: soundData,
         affiliation: affiliation)
     
+}
+
+
+func decode(ForceSensitive json:JSONDictionary) throws -> StrictForceSensitive {
+    
+    guard let midichlorians = json[JSONKeys.midichlorians.rawValue] as? Int
+        else {
+            throw JSONProcessingError.JSONFormatError
+    }
+    
+    return StrictForceSensitive(
+        character: try decode(StarWarsCharacter: json),
+        midichlorians: midichlorians)
 }
 
 

@@ -48,6 +48,7 @@
 		6D0B2F731C06770100BE9AC5 /* yoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D0B2F551C06770100BE9AC5 /* yoda.jpg */; };
 		6D127C821C07A8390086C457 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D127C811C07A8390086C457 /* JSONProcessing.swift */; };
 		6D127C851C07B6CE0086C457 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D127C841C07B6CE0086C457 /* FoundationExtensions.swift */; };
+		6D127C871C09C2BD0086C457 /* StarWarsUniverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D127C861C09C2BD0086C457 /* StarWarsUniverse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		6D0B2F551C06770100BE9AC5 /* yoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoda.jpg; sourceTree = "<group>"; };
 		6D127C811C07A8390086C457 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
 		6D127C841C07B6CE0086C457 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		6D127C861C09C2BD0086C457 /* StarWarsUniverse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsUniverse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				6D0B2EF71C06052C00BE9AC5 /* Affiliations.swift */,
 				6D0B2EF91C066F0600BE9AC5 /* ForceSensitive.swift */,
 				6D127C811C07A8390086C457 /* JSONProcessing.swift */,
+				6D127C861C09C2BD0086C457 /* StarWarsUniverse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D127C851C07B6CE0086C457 /* FoundationExtensions.swift in Sources */,
+				6D127C871C09C2BD0086C457 /* StarWarsUniverse.swift in Sources */,
 				6D127C821C07A8390086C457 /* JSONProcessing.swift in Sources */,
 				6D0B2ED61C04DE6A00BE9AC5 /* ViewController.swift in Sources */,
 				6D0B2EF51C04E51100BE9AC5 /* StarWarsCharacter.swift in Sources */,
