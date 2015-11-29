@@ -159,6 +159,22 @@ extension StarWarsCharacter {
 }
 
 
+extension StarWarsUniverse {
+    
+    convenience init(characters cs: [StrictStarWarsCharacter]) {
+        
+        //We will init each of them
+        var chars = [StarWarsCharacter]()
+        for each in cs {
+            let c = StarWarsCharacter(StrictStarWarsCharacter: each)
+            chars.append(c)
+        }
+        
+        //Pass the array to designated init
+        self.init(arrayOfCharacters: chars)
+    }
+}
+
 
 
 

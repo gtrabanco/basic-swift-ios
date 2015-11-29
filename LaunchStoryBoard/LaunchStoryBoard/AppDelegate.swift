@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  StarWarsVII
+//  LaunchStoryBoard
 //
-//  Created by Gabriel Trabanco Llano on 24/11/15.
+//  Created by Gabriel Trabanco Llano on 29/11/15.
 //  Copyright © 2015 Gabriel Trabanco Llano. All rights reserved.
 //
 
@@ -15,8 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        //self.tddParaPobres()
-        // Override point for customization after application launch.
+        // Launch story board
+        let sb = UIStoryboard.init(name: "Test", bundle: nil)
+        
+        //Get the main VC
+        let rootVC = sb.instantiateInitialViewController()
+        
+        //Create a window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = rootVC
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
@@ -41,52 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    func tddParaPobres() {
-        
-        
-        if let img = UIImage(named: "vader.jpg"),
-        soundFileUrl = NSBundle.mainBundle().URLForResource("vader", withExtension: "caf"),
-        soundFile = NSData(contentsOfURL: soundFileUrl),
-        wikiURL = NSURL(string: "https://en.wikipedia.org/wiki/Darth_Vader")
-        {
-            let vader = ForceSensitive(sithWithFirstName: "Anakin", lastName: "Skywalker", alias: "Darth Vader", soundData: soundFile, photo: img, url: wikiURL, midichlorians: 15_000)
-            
-            print(vader)
-        }
-        
-        
-        // JSON Parser Test
-        do {
-            if let url = NSBundle.mainBundle().URLForResource("regularCharacters.json"),
-                data = NSData(contentsOfURL: url),
-                characters = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONArray {
-                    
-                    do {
-                        
-                        let strictJabba = try decode(StarWarsCharacter: characters[4])
-                        let jabba = StarWarsCharacter(StrictStarWarsCharacter: strictJabba)
-                        
-                        print(jabba)
-                        
-                    } catch {
-                        
-                        print("Error durint the creation of Jabba")
-                    }
-                    
-                    
-                    //Create the universe from the array we have
-                    let strictChars = decode(StarWarsCharacters: characters)
-                    //print(strictChars)
-                    
-                    let u = StarWarsUniverse(characters: strictChars)
-                    print(u)
-            }
-            
-        } catch {
-            
-            print("We are out!")
-        }
-    }
+
+
 }
 
