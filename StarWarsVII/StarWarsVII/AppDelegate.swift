@@ -55,6 +55,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(vader)
         }
         
+        
+        // JSON Parser Test
+        do {
+            if let url = NSBundle.mainBundle().URLForResource("regularCharacters.json"),
+                data = NSData(contentsOfURL: url),
+                characters = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONArray {
+                    
+                    do {
+                        
+                        let strictJabba = try decode(StarWarsCharacter: characters[4])
+                        let jabba = StarWarsCharacter(StrictStarWarsCharacter: strictJabba)
+                        
+                        print(jabba)
+                        
+                    } catch {
+                        
+                        print("Error durint the creation of Jabba")
+                    }
+                    
+                    
+                    //Create the universe from the array we have
+                    let strictChars = decode(StarWarsCharacters: characters)
+                    print(strictChars)
+            }
+            
+        } catch {
+            
+            print("We are out!")
+        }
     }
 }
 

@@ -124,6 +124,41 @@ func decode(ForceSensitive json:JSONDictionary) throws -> StrictForceSensitive {
 }
 
 
+func decode(StarWarsCharacters json: JSONArray) -> [StrictStarWarsCharacter] {
+    
+    var arrayOfValues:[StrictStarWarsCharacter] = []
+    
+    for dict in json {
+        do {
+            let stc = try decode(StarWarsCharacter: dict)
+            arrayOfValues.append(stc)
+        } catch {
+            
+            fatalError("Error parsing a StarWarsCharacter")
+            //continue
+        }
+    }
+    
+    return arrayOfValues
+}
+
+
+//MARK: Initialization
+extension StarWarsCharacter {
+    
+    //Init that accept the params in an struct
+    convenience init(StrictStarWarsCharacter c: StrictStarWarsCharacter) {
+        self.init(firstName: c.firstName,
+            lastName: c.lastName,
+            alias: c.alias,
+            soundData: c.soundData,
+            photo: c.photo,
+            url: c.url,
+            affiliation: c.affiliation)
+    }
+}
+
+
 
 
 
