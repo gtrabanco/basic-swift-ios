@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6D0B2ED41C04DE6A00BE9AC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B2ED31C04DE6A00BE9AC5 /* AppDelegate.swift */; };
 		6D0B2ED61C04DE6A00BE9AC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B2ED51C04DE6A00BE9AC5 /* ViewController.swift */; };
-		6D0B2ED91C04DE6A00BE9AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D0B2ED71C04DE6A00BE9AC5 /* Main.storyboard */; };
 		6D0B2EDB1C04DE6A00BE9AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D0B2EDA1C04DE6A00BE9AC5 /* Assets.xcassets */; };
 		6D0B2EDE1C04DE6A00BE9AC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D0B2EDC1C04DE6A00BE9AC5 /* LaunchScreen.storyboard */; };
 		6D0B2EE91C04DE6A00BE9AC5 /* StarWarsVIITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B2EE81C04DE6A00BE9AC5 /* StarWarsVIITests.swift */; };
@@ -65,7 +64,6 @@
 		6D0B2ED01C04DE6A00BE9AC5 /* StarWarsVII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsVII.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0B2ED31C04DE6A00BE9AC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D0B2ED51C04DE6A00BE9AC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6D0B2ED81C04DE6A00BE9AC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D0B2EDA1C04DE6A00BE9AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D0B2EDD1C04DE6A00BE9AC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D0B2EDF1C04DE6A00BE9AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				6D0B2EF61C04E51600BE9AC5 /* Models */,
 				6D0B2ED31C04DE6A00BE9AC5 /* AppDelegate.swift */,
 				6D0B2ED51C04DE6A00BE9AC5 /* ViewController.swift */,
-				6D0B2ED71C04DE6A00BE9AC5 /* Main.storyboard */,
 				6D0B2EDA1C04DE6A00BE9AC5 /* Assets.xcassets */,
 				6D0B2EDC1C04DE6A00BE9AC5 /* LaunchScreen.storyboard */,
 				6D0B2EDF1C04DE6A00BE9AC5 /* Info.plist */,
@@ -350,7 +347,6 @@
 				6D0B2F591C06770100BE9AC5 /* chewie.jpg in Resources */,
 				6D0B2F631C06770100BE9AC5 /* luke.caf in Resources */,
 				6D0B2EDB1C04DE6A00BE9AC5 /* Assets.xcassets in Resources */,
-				6D0B2ED91C04DE6A00BE9AC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,14 +394,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6D0B2ED71C04DE6A00BE9AC5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D0B2ED81C04DE6A00BE9AC5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6D0B2EDC1C04DE6A00BE9AC5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

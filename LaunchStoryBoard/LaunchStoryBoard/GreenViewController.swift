@@ -16,6 +16,10 @@ class GreenViewController: UIViewController {
     }
     
     //MARK: - Scene Transitions
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        return true
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         //Guess which segue is
@@ -26,7 +30,7 @@ class GreenViewController: UIViewController {
             //segue.destinationViewController.title = "Bluralize your life" // Cast not needed for this
             
             //To update the var name we have to make a cast
-            var destVC = segue.destinationViewController as? BlueViewController
+            let destVC = segue.destinationViewController as? BlueViewController
             destVC?.name = "Royal Blue"
             
         } else {

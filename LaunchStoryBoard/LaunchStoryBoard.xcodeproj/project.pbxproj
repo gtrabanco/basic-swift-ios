@@ -14,6 +14,9 @@
 		6D127CB51C0B4B520086C457 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D127CB41C0B4B520086C457 /* Test.storyboard */; };
 		6DD2AC041C0B5D3700867313 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD2AC031C0B5D3700867313 /* BlueViewController.swift */; };
 		6DD2AC061C0B62B600867313 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD2AC051C0B62B600867313 /* GreenViewController.swift */; };
+		6DD2AC081C0DC02F00867313 /* Utils.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD2AC071C0DC02F00867313 /* Utils.storyboard */; };
+		6DD2AC0A1C0DC0D100867313 /* Pink_Panther.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD2AC091C0DC0D100867313 /* Pink_Panther.png */; };
+		6DD2AC0C1C0DC67900867313 /* PinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD2AC0B1C0DC67900867313 /* PinkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		6D127CB41C0B4B520086C457 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Test.storyboard; path = ../Test.storyboard; sourceTree = "<group>"; };
 		6DD2AC031C0B5D3700867313 /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		6DD2AC051C0B62B600867313 /* GreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		6DD2AC071C0DC02F00867313 /* Utils.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Utils.storyboard; sourceTree = "<group>"; };
+		6DD2AC091C0DC0D100867313 /* Pink_Panther.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pink_Panther.png; sourceTree = "<group>"; };
+		6DD2AC0B1C0DC67900867313 /* PinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		6D127C931C0B4A8C0086C457 /* LaunchStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				6DD2AC091C0DC0D100867313 /* Pink_Panther.png */,
 				6D127CB41C0B4B520086C457 /* Test.storyboard */,
 				6D127C941C0B4A8C0086C457 /* AppDelegate.swift */,
 				6D127C9B1C0B4A8C0086C457 /* Assets.xcassets */,
@@ -86,6 +93,8 @@
 				6D127CA01C0B4A8C0086C457 /* Info.plist */,
 				6DD2AC031C0B5D3700867313 /* BlueViewController.swift */,
 				6DD2AC051C0B62B600867313 /* GreenViewController.swift */,
+				6DD2AC071C0DC02F00867313 /* Utils.storyboard */,
+				6DD2AC0B1C0DC67900867313 /* PinkViewController.swift */,
 			);
 			path = LaunchStoryBoard;
 			sourceTree = "<group>";
@@ -182,6 +191,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DD2AC081C0DC02F00867313 /* Utils.storyboard in Resources */,
+				6DD2AC0A1C0DC0D100867313 /* Pink_Panther.png in Resources */,
 				6D127CB51C0B4B520086C457 /* Test.storyboard in Resources */,
 				6D127C9F1C0B4A8C0086C457 /* LaunchScreen.storyboard in Resources */,
 				6D127C9C1C0B4A8C0086C457 /* Assets.xcassets in Resources */,
@@ -202,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DD2AC0C1C0DC67900867313 /* PinkViewController.swift in Sources */,
 				6DD2AC061C0B62B600867313 /* GreenViewController.swift in Sources */,
 				6DD2AC041C0B5D3700867313 /* BlueViewController.swift in Sources */,
 				6D127C951C0B4A8C0086C457 /* AppDelegate.swift in Sources */,

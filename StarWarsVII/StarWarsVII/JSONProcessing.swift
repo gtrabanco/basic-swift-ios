@@ -124,11 +124,16 @@ func decode(ForceSensitive json:JSONDictionary) throws -> StrictForceSensitive {
 }
 
 
-func decode(StarWarsCharacters json: JSONArray) -> [StrictStarWarsCharacter] {
+func decode(StarWarsCharacters json: JSONArray) throws -> [StrictStarWarsCharacter] {
     
     var arrayOfValues:[StrictStarWarsCharacter] = []
     
     for dict in json {
+        
+        let stc = try decode(StarWarsCharacter: dict)
+        arrayOfValues.append(stc)
+        
+        /* Old code
         do {
             let stc = try decode(StarWarsCharacter: dict)
             arrayOfValues.append(stc)
@@ -137,6 +142,7 @@ func decode(StarWarsCharacters json: JSONArray) -> [StrictStarWarsCharacter] {
             fatalError("Error parsing a StarWarsCharacter")
             //continue
         }
+        // */
     }
     
     return arrayOfValues

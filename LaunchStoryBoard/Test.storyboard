@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="XtP-oy-XDM"/>
                         <viewControllerLayoutGuide type="bottom" id="cdQ-nX-gpP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7HB-bv-xxB">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="GreenViewController" id="7HB-bv-xxB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -40,7 +40,7 @@
         <!--Blue View Controller-->
         <scene sceneID="nMd-cl-28G">
             <objects>
-                <viewController id="daA-ix-mVV" customClass="BlueViewController" customModule="LaunchStoryBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueViewController" id="daA-ix-mVV" customClass="BlueViewController" customModule="LaunchStoryBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xH1-oJ-UFi"/>
                         <viewControllerLayoutGuide type="bottom" id="xdM-EP-G5e"/>
@@ -59,6 +59,18 @@
                                     <segue destination="ooN-Bj-khg" kind="unwind" unwindAction="goAway:" id="Vd3-aH-X7d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFN-Xc-SHM">
+                                <rect key="frame" x="80" y="291" width="225" height="121"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Ir al Rosa">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1fv-0g-YHx" kind="show" id="9CF-pY-yx8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,6 +80,14 @@
                 <exit id="ooN-Bj-khg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1847" y="1099"/>
+        </scene>
+        <!--PinkViewController-->
+        <scene sceneID="Hy9-Ar-YJ4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Utils" referencedIdentifier="PinkViewController" id="1fv-0g-YHx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAe-RV-Bbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1847.5" y="1567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="05Z-ZO-sT3">
